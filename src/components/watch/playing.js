@@ -4,8 +4,9 @@ import { Grid, Typography, Paper, Divider } from '@material-ui/core'
 import {moviesList} from '../moviesList'
 
 function Playing(props) {
+    const movieLocation = `\\media\\movies\\${props.match.params.title}.mp4`
     const [details, setDetails] = React.useState();
-
+   
     React.useEffect(() => {
         moviesList.map(movies => {
             if(movies.movieTitle === props.match.params.title) {
@@ -13,6 +14,8 @@ function Playing(props) {
             }
         })
     }, [])
+
+    
 
     return (
         <React.Fragment>
@@ -35,7 +38,7 @@ function Playing(props) {
                 <Grid item xs={12} style={{padding: '15px', marginTop: '5px'}}>
                 <Typography align="center">
                     <video width="90%" height="70%" controls controlsList="nodownload" autoPlay>
-                        <source src={`\\movies\\${props.match.params.title}.mp4`} type="video/mp4" />
+                        <source src={movieLocation} type="video/mp4" />
                         <Typography>Your browser does not support the video tag.</Typography>
                     </video>
                 </Typography>
