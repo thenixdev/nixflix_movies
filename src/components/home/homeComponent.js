@@ -10,7 +10,7 @@ class HomeComponent extends PureComponent {
                 <Grid container>
                     <Grid item xs={12} md={12}>
                         <Typography align="center">
-                            <img src="img\cover\HOMEPAGE.jpg" height="auto" width="100%"/>
+                            <img src="media\cover\HOMEPAGE.jpg" height="auto" width="100%"/>
                         </Typography>
                     </Grid>
                 </Grid>
