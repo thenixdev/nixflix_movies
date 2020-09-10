@@ -1,3 +1,10 @@
+// Important Notes
+// movieTitle must be the same name with your video's file name
+// Example
+// movieTitle: 'Spongebob'
+
+// Your file inside must be media/movies/ "Spongebob.mp4"
+
 export const moviesList = [
     {
         imageURL: '../media/movies/peninsula.jpg',
